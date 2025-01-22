@@ -33,7 +33,7 @@ EasyAds Pro是[倍业科技](http://www.bayescom.com/)技术团队研发的一�
 
 ### 1. 整体架构
 
-![arch.jpg](/md/coreImgs/arch.jpg)
+![arch.jpg](arch.jpg)
 
 
 ### 2. 模块介绍

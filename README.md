@@ -29,7 +29,24 @@ EasyAds Pro是[倍业科技](http://www.bayescom.com/)技术团队研发的一�
 
 项目完全开源，不进行任何用户相关信息的获取及上报，开发者可根据自己业务需求进行二次开发。
 
-## 快速接入指引
+## 核心模块介绍
+
+### 1. 整体架构
+
+![arch.jpg](/md/coreImgs/arch.jpg)
+
+
+### 2. 模块介绍
+
+| 模块名称      | 说明                                                                                                                                                                                |
+|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 聚合SDK     | **Advance项目** <br> 集成在手机端的SDK软件，与后端服务引擎Stella交互获取SDK管理分发策略，根据策略启动不同的广告SDK并获取对应广告，目前包括[Android]()和[iOS]()两个项目，集成主流[穿山甲]()、[优量汇]()、[快手]()、[百度]()以及[倍业]()广告SDK。                      |
+| 聚合管理平台    | **Apollo项目**+**Luna项目**+**Mysql数据库** <br> 用于管理聚合SDK的分发策略，包括媒体的广告位管理、SDK分发策略管理、用户管理、版本管理等，[Apollo]()项目是管理操作的前端项目基于React开发，[Luna]()项目是管理操作的后端服务项目基于SpringBoot框架开发。                  |
+| SDK策略服务   | **Stella项目**+**Redis服务** <br> [Stella]()是SDK策略引擎服务，基于OpenResty框架开发，具有较高的HTTP并发处理能力。策略引擎读取聚合管理平台(Luna)推送到Redis的配置信息获取对应广告位的流量分发管理信息，与SDK交互根据请求返回不同的SDK启动策略配置；同时策略服务还是SDK上报打点的收集服务。 |
+| 数据服务      | **Nebula项目** <br> [Nebula]()是数据任务项目，该项目根据SDK策略服务的日志信息统计报表数据信息，也支持通过配置的Report API信息，自动拉取各方SDK数据，目前可支持穿山甲、优量汇的Report API数据拉取功能。                                                     | 
+
+
+## 代码快速接入指引
 
 | 系统     | 代码指引                                                                                                                                                                                                                                                                    |
 |-------- |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -39,6 +56,23 @@ EasyAds Pro是[倍业科技](http://www.bayescom.com/)技术团队研发的一�
 | Luna | [![Luna-github](https://img.shields.io/badge/Github-EasyAds_Pro_Luna_v1.0-blue.svg)](https://github.com/bayescom/EasyAds-Pro_Luna) [![Luna-gitee](https://img.shields.io/badge/Github-EasyAds_Pro_Luna_v1.0-blue.svg)]() |
 | Stella | [![Stella-github](https://img.shields.io/badge/Github-EasyAds_Pro_Stella_v1.0-green.svg)](https://github.com/bayescom/EasyAds-Pro_Stella) [![Stella-gitee](https://img.shields.io/badge/Github-EasyAds_Pro_Stella_v1.0-green.svg)]()|
 | Nebula | [![Nebula-github](https://img.shields.io/badge/Github-EasyAds_Pro_Nebula_v1.0-red.svg)](https://github.com/bayescom/EasyAds-Pro_Nebula) [![Nebula-gitee](https://img.shields.io/badge/Github-EasyAds_Pro_Nebula_v1.0-red.svg)]()|
+
+## 部署指引
+
+### 1. 自由部署
+
+用户根据自己需要，依次部署各个模块，各模块部署指引如下：
+
+- [Apollo部署指引](deploy/apollo.md)
+- [Luna部署指引](deploy/luna.md)
+- [Stella部署指引](deploy/stella.md)
+- [Nebula部署指引](deploy/nebula.md)
+
+如在部署中遇到问题，请联系我们的技术支持人员或发送邮件至easyads@bayescom.com，我们将尽快为您解决问题。
+
+### 2. Docker部署
+
+Docker部署准备中...
 
 
 ## 合规指南

@@ -38,13 +38,12 @@ EasyAds Pro是[倍业科技](http://www.bayescom.com/)技术团队研发的一�
 
 ### 2. 模块介绍
 
-| 模块名称      | 说明                                                                                                                                                                                |
-|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 聚合SDK     | **Advance项目** <br> 集成在手机端的SDK软件，与后端服务引擎Stella交互获取SDK管理分发策略，根据策略启动不同的广告SDK并获取对应广告，目前包括[Android]()和[iOS]()两个项目，集成主流[穿山甲]()、[优量汇]()、[快手]()、[百度]()以及[倍业]()广告SDK。                      |
-| 聚合管理平台    | **Apollo项目**+**Luna项目**+**Mysql数据库** <br> 用于管理聚合SDK的分发策略，包括媒体的广告位管理、SDK分发策略管理、用户管理、版本管理等，[Apollo]()项目是管理操作的前端项目基于React开发，[Luna]()项目是管理操作的后端服务项目基于SpringBoot框架开发。                  |
-| SDK策略服务   | **Stella项目**+**Redis服务** <br> [Stella]()是SDK策略引擎服务，基于OpenResty框架开发，具有较高的HTTP并发处理能力。策略引擎读取聚合管理平台(Luna)推送到Redis的配置信息获取对应广告位的流量分发管理信息，与SDK交互根据请求返回不同的SDK启动策略配置；同时策略服务还是SDK上报打点的收集服务。 |
-| 数据服务      | **Nebula项目** <br> [Nebula]()是数据任务项目，该项目根据SDK策略服务的日志信息统计报表数据信息，也支持通过配置的Report API信息，自动拉取各方SDK数据，目前可支持穿山甲、优量汇的Report API数据拉取功能。                                                     | 
-
+| 模块名称      | 说明                                                                                                                                                                                                                                                                                                                 |
+|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 聚合SDK     | **Advance项目** <br> 集成在手机端的SDK软件，与后端服务引擎Stella交互获取SDK管理分发策略，根据策略启动不同的广告SDK并获取对应广告，目前包括[Android](https://github.com/bayescom/Android_AdvanceSDK)和[iOS](https://github.com/bayescom/iOS_AdvanceSDK)两个项目，集成主流[穿山甲(字节)](https://www.csjplatform.com/union/media/union/download)、[优量汇(腾讯)](https://adnet.qq.com/resource/sdk)、[百青藤(百度)](https://union.baidu.com/bqt/#/)、[快手](https://u.kuaishou.com/)以及[倍业](https://www.bayescom.com/docsify/docs/#/bayescom/)广告SDK。 |
+| 聚合管理平台    | **Apollo项目**+**Luna项目**+**Mysql数据库** <br> 用于管理聚合SDK的分发策略，包括媒体的广告位管理、SDK分发策略管理、用户管理、版本管理等，[Apollo](https://github.com/bayescom/EasyAds-Pro_Apollo)项目是管理操作的前端项目基于React开发，[Luna](https://github.com/bayescom/EasyAds-Pro_Luna)项目是管理操作的后端服务项目基于SpringBoot框架开发。                                                         |
+| SDK策略服务   | **Stella项目**+**Redis服务** <br> [Stella](https://github.com/bayescom/EasyAds-Pro_Stella)是SDK策略引擎服务，基于OpenResty框架开发，具有较高的HTTP并发处理能力。策略引擎读取聚合管理平台(Luna)推送到Redis的配置信息获取对应广告位的流量分发管理信息，与SDK交互根据请求返回不同的SDK启动策略配置；同时策略服务还是SDK上报打点的收集服务。                                                                                    |
+| 数据服务      | **Nebula项目** <br> [Nebula](https://github.com/bayescom/EasyAds-Pro_Nebula)是数据任务项目，该项目根据SDK策略服务的日志信息统计报表数据信息，也支持通过配置的Report API信息，自动拉取各方SDK数据，目前可支持穿山甲、优量汇的Report API数据拉取功能。                                                                                                                                        | 
 
 ## 代码快速接入指引
 

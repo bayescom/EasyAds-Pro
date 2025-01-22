@@ -1,5 +1,7 @@
 # EasyAds Pro
 
+![image](bayescom.png)
+
 **智能聚合 极速变现 专业私有 卓越升级**
 
 ## 项目简介

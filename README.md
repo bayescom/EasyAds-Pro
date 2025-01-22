@@ -22,7 +22,7 @@ EasyAds Pro是[倍业科技](http://www.bayescom.com/)技术团队研发的一�
 
 ### 2. 集成简单
 
-双端均可通过选择性的配置装载不同广告渠道SDK快速集成。开发者无须进行二次开发，直接调用EasyAds ProSDK封装的上层接口即可；前台系统可直接复用EasyAdsPro前台系统。目前已集成主流的[穿山甲(字节)](https://www.csjplatform.com/union/media/union/download)、[优量汇(腾讯)](https://adnet.qq.com/resource/sdk)、
+双端均可通过选择性的配置装载不同广告渠道SDK快速集成。开发者无须进行二次开发，直接调用EasyAds Pro SDK封装的上层接口即可；前台系统可直接复用EasyAds Pro前台系统。目前已集成主流的[穿山甲(字节)](https://www.csjplatform.com/union/media/union/download)、[优量汇(腾讯)](https://adnet.qq.com/resource/sdk)、
 [百青藤(百度)](https://union.baidu.com/bqt/#/)、[快手](https://u.kuaishou.com/)，开发者也可以通过自定义SDK渠道来实现其他广告SDK的对接管理。
 
 ### 3. 开源，免费，安全
